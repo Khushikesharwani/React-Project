@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --red: #d01c28;
+  --gray: #2e2e2e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+button {
+  all: unset;
+  padding: 6px 16px;
+  background: var(--red);
+  height: 32px;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s ease-in-out; /* Smooth hover transition */
+}
+
+button:hover {
+  background: black; /* Change background to black */
+  color: white;      /* Change text color to white */
+  transform: scale(1.1); /* Slightly enlarge the button */
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: 0 16px; /* Add padding to prevent content from touching screen edges */
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  height: 72px;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap; /* Ensure content wraps on smaller screens */
+  align-items: center;
+  justify-content: space-between;
+  height: calc(100vh - 72px);
+  gap: 24px;
+}
+
+.hero-content {
+  flex: 1 1 50%; /* Allow content to scale for smaller screens */
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.hero h1 {
+  font-weight: 800;
+  line-height: 1.2;
+  font-size: 4rem; /* Adjust font size for responsiveness */
+}
+
+.hero p {
+  font-weight: 600;
+  color: var(--gray);
+  max-width: 400px;
+}
+
+.hero-btn {
+  display: flex;
+  flex-wrap: wrap; /* Wrap buttons if there's not enough space */
+  gap: 20px;
+}
+
+.hero-btn button {
+  font-size: 16px; /* Adjust button font size for smaller screens */
+}
+
+.secondary-btn {
+  background: transparent;
+  color: var(--gray);
+  border: 1px solid gray;
+}
+
+.secondary-btn:hover {
+  background: var(--gray); /* Change background to gray */
+  color: white;           /* Change text color to white */
+}
+
+.shopping p {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.brand-icons {
+  display: flex;
+  gap: 16px;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column; /* Stack content vertically on smaller screens */
+    text-align: center; /* Center-align text for better readability */
+  }
+
+  .hero h1 {
+    font-size: 3rem; /* Reduce heading size for smaller screens */
+  }
+
+  .hero p {
+    font-size: 1rem; /* Adjust paragraph size */
+  }
+
+  .hero-btn {
+    justify-content: center; /* Center-align buttons */
+  }
+}
